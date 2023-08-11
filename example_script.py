@@ -134,8 +134,8 @@ AGC = market.create_wind_plant_regulation_signal(AGC, df_RT_result)
 
 # Plot
 agc_times = pd.date_range(
-    df_st_forecast.Time.iloc[0], 
-    df_st_forecast.Time.iloc[-1]+pd.Timedelta(5, 'm')-pd.Timedelta(4, 's'), 
+    df_st_forecast.Time.iloc[0]-pd.Timedelta(5, 'm'),
+    df_st_forecast.Time.iloc[-1]-pd.Timedelta(4, 's'), 
     freq='4s'
 )
 AGC['time'] = agc_times
