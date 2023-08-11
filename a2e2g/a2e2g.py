@@ -20,7 +20,7 @@ import a2e2g.modules.forecast.forecast_backend as anen
 import a2e2g.modules.power_forecast.MCPowerEstimation as mcpe
 # import a2e2g.modules.floris.FiveMinuteAheadPowerEstimation as fmape
 
-import a2e2g.modules.control.RL.RLcontrol as control
+#import a2e2g.modules.control.RL.RLcontrol as control
 import a2e2g.modules.control.RL.Cluster as cluster
 import a2e2g.modules.control.control_library as controllers
 import a2e2g.modules.control.RL.timeseries as ts
