@@ -1,0 +1,36 @@
+# add here any required packages you need for your code to run
+
+
+
+
+Links with other code: The market's code uses wind_farm_capacity that should be a FLORIS variable.
+Moreover, I realize that the code has embedded assumptions that FLORIS +GP will always send 5 min data.
+We can either leave it as is and throw errors when a different resolution is received or make the code
+more adjustable
+
+wind_farm_capacity=48*2.3 #This hardcoded might have to be linked with some FLORIS variable Elina does not know
+
+Hardcoded:
+most of the hardcoded assumptions are in the main file 
+To keep track of them, I had created a list of options list which I was storing in store analysis
+The only additional hardcoded assumptions are in step b and e (left some comments on how I could handle this) and in pre load price data
+
+
+Packages:
+import os
+import sys
+import csv, datetime
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import math
+
+from pyomo.environ import *
+from pyomo.opt import SolverFactory
+from scipy.stats import norm
+from zipfile import ZipFile 
+from datetime import date
+
+
+Input files: I did not move ERCOT_data/Historical and SPP_data from feature integration
+We could definitely move them over or to a sharepoint. What you think is best
